@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" role="img" aria-labelledby="title">
+  <title>Profile photo illustration</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c1829"/>
+      <stop offset="100%" stop-color="#112240"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4dffc3"/>
+      <stop offset="100%" stop-color="#0f62fe"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="480" rx="40" fill="url(#bg)"/>
+  <circle cx="200" cy="170" r="100" fill="url(#accent)" opacity="0.14"/>
+  <circle cx="200" cy="170" r="80" fill="#17263b"/>
+  <circle cx="170" cy="155" r="12" fill="#4dffc3"/>
+  <circle cx="230" cy="155" r="12" fill="#4dffc3"/>
+  <path d="M140 220c20 30 60 45 100 45s80-15 100-45" fill="#1d9e75" opacity="0.12"/>
+  <path d="M120 270c0-45 40-80 90-80s90 35 90 80v40c0 9-7 16-16 16H136c-9 0-16-7-16-16v-40z" fill="#1c2a3f"/>
+  <circle cx="200" cy="169" r="10" fill="#dbe7ff"/>
+  <path d="M140 300c0-35 45-65 60-65s60 30 60 65" fill="#4dffc3" opacity="0.15"/>
+  <rect x="120" y="340" width="160" height="80" rx="26" fill="#162536"/>
+  <text x="200" y="395" text-anchor="middle" font-family="Syne, sans-serif" font-size="44" fill="#4dffc3">MA</text>
+</svg>
