@@ -61,17 +61,7 @@ nav.scrolled{padding:0.7rem 3rem;background:rgba(6,13,26,0.97)}
 .photo-frame{position:relative;width:280px;height:340px}
 .photo-frame::after{content:'';position:absolute;bottom:-12px;right:-12px;width:100%;height:100%;border:1px solid rgba(77,255,195,0.25);border-radius:8px;z-index:-1;transition:transform 0.3s}
 .photo-frame:hover::after{transform:translate(5px,5px)}
-.photo-placeholder{width:100%;height:100%;border-radius:8px;background:linear-gradient(135deg,var(--bg3),var(--bg2));border:1px solid rgba(77,255,195,0.2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;position:relative;overflow:hidden}
-.photo-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 25%,rgba(77,255,195,0.08),transparent 65%)}
-.photo-avatar{width:110px;height:110px;border-radius:50%;background:rgba(77,255,195,0.08);border:2px solid rgba(77,255,195,0.3);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:2.6rem;font-weight:800;color:var(--teal)}
-.photo-name-card{text-align:center}
-.photo-name-card h3{font-family:var(--font-head);color:var(--lightest);font-size:1rem;font-weight:700;margin-bottom:0.2rem}
-.photo-name-card p{font-size:0.76rem;color:var(--teal)}
-.upload-hint{position:absolute;bottom:0;left:0;right:0;background:rgba(77,255,195,0.06);border-top:1px solid rgba(77,255,195,0.1);padding:0.65rem;text-align:center;font-size:0.7rem;color:var(--slate);cursor:pointer;transition:background 0.2s}
-.upload-hint:hover{background:rgba(77,255,195,0.12);color:var(--teal)}
-.upload-hint label{cursor:pointer}
-#photo-input{display:none}
-.photo-actual{width:100%;height:100%;object-fit:cover;border-radius:8px;display:none;filter:grayscale(15%);transition:filter 0.4s}
+.photo-actual{width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;filter:grayscale(15%);transition:filter 0.4s}
 .photo-actual:hover{filter:none}
 
 /* STATS */
@@ -220,17 +210,6 @@ footer a{color:var(--teal);text-decoration:none}
     <div class="hero-right">
       <div class="photo-frame">
         <img id="photo-actual" class="photo-actual" alt="Mohd Arif" src="assets/profile-photo.svg" style="display:block;" />
-        <div class="photo-placeholder" id="photo-placeholder" style="display:none;">
-          <div class="photo-avatar">MA</div>
-          <div class="photo-name-card">
-            <h3>Mohd Arif</h3>
-            <p>Cloud Architect · Noida</p>
-          </div>
-          <div class="upload-hint">
-            <label for="photo-input">📷 Click to upload your photo</label>
-            <input type="file" id="photo-input" accept="image/*">
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -519,17 +498,6 @@ function type(){
   setTimeout(type,del?42:82);
 }type();
 
-// PHOTO UPLOAD
-document.getElementById('photo-input').addEventListener('change',function(){
-  const f=this.files[0];if(!f)return;
-  const r=new FileReader();
-  r.onload=e=>{
-    const img=document.getElementById('photo-actual');
-    img.src=e.target.result;img.style.display='block';
-    document.getElementById('photo-placeholder').style.display='none';
-  };
-  r.readAsDataURL(f);
-});
 </script>
 </body>
 </html>
